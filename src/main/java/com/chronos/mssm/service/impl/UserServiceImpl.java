@@ -27,13 +27,13 @@ public class UserServiceImpl implements IUserService {
 		return i;
 	}
 
-	public IUserDao getUserDao() {
+	/*public IUserDao getUserDao() {
 		return userDao;
 	}
 
 	public void setUserDao(IUserDao userDao) {
 		this.userDao = userDao;
-	}
+	}*/
 
 	@Override
 	public void queryUserByName(String username) {

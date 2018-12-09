@@ -2,8 +2,6 @@ package com.chronos.mssm.dao;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Param;
-
 import com.chronos.mssm.model.User;
 
 public interface IUserDao {

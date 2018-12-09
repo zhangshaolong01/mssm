@@ -1,7 +1,6 @@
 package com.chronos.mssm.dao.impl;
 
 import java.util.List;
-import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,13 +23,13 @@ public class UserDaoImpl implements IUserDao{
 	private String mapperNamespace = "com.chronos.mssm.mapper.user";
 
 	
-	public SqlSession getSqlSession() {
+	/*public SqlSession getSqlSession() {
 		return sqlSession;
 	}
 
 	public void setSqlSession(SqlSession sqlSession) {
 		this.sqlSession = sqlSession;
-	}
+	}*/
 
 	/**
 	 * 添加一个用户

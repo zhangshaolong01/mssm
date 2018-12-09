@@ -2,9 +2,6 @@ package com.chronos.mssm.controller;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,8 +13,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.chronos.mssm.model.ReturnResult;
 import com.chronos.mssm.model.User;
 import com.chronos.mssm.service.IUserService;
-import com.github.pagehelper.Page;
-import com.github.pagehelper.PageHelper;
 
 /**
  * 用户Controller
@@ -32,13 +27,13 @@ public class UserController {
 	@Autowired
 	private IUserService userService;
 
-	public IUserService getUserService() {
+	/*public IUserService getUserService() {
 		return userService;
 	}
 
 	public void setUserService(IUserService userService) {
 		this.userService = userService;
-	}
+	}*/
 	/**
 	 * 新增用户
 	 * produces="text/html;charset=UTF-8 解决返回结果中文乱码
@@ -47,7 +42,7 @@ public class UserController {
 	 */
 	@ResponseBody
 	@RequestMapping(value="/add",method = RequestMethod.POST,produces="text/html;charset=UTF-8")
-	public String addUser(User user)	{	
+	public String addUser(User user)	{
 		int i = this.userService.addUser(user);
 		ReturnResult result = new ReturnResult();
 		if(i > 0) {
